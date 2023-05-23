@@ -1,3 +1,9 @@
 node_modules
 # Keep environment variables out of version control
 .env
+
+# Do not upload files inside the uploads folder and ignore image files
+uploads/*
+*.jpg
+*.jpeg
+*.png
