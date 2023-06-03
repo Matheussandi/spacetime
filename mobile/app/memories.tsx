@@ -43,9 +43,10 @@ export default function NewMemories() {
     setMemories(response.data)
   }
 
+  // Pre-rendering if memory is added
   useEffect(() => {
     loadMemories()
-  }, [])
+  }, [memories])
 
   return (
     <ScrollView

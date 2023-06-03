@@ -2,7 +2,7 @@
 
 import { Camera } from 'lucide-react'
 import { MediaPicker } from './MediaPicker'
-import { FormEvent } from 'react'
+import { FormEvent, useEffect } from 'react'
 import Cookie from 'js-cookie'
 import { api } from '@/lib/api'
 import { useRouter } from 'next/navigation'
@@ -46,6 +46,9 @@ export function NewMemoryForm() {
 
     router.push('/')
   }
+
+  // It's only pre-rendering the first memory
+  useEffect(() => {}, [])
 
   return (
     <form onSubmit={handleCreateMemory} className="flex flex-1 flex-col gap-2">
