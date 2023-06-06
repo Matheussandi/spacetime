@@ -3,16 +3,10 @@
 <p align="justify">O NLW Spacetime - Cápsula do Tempo é um projeto desenvolvido durante a NLW Spacetime da Rocketseat, utilizou-se NodeJS com Fastify e React com NextJS.</p>
 
 ### <p align="center">Web</p>
-<p align="center">
-  <video src="https://github.com/Matheussandi/spacetime/assets/29473781/558e652e-ff68-4eb1-8505-5b0ef71c2f9c"/>
-  <br>
-</p>
+https://github.com/Matheussandi/spacetime/assets/29473781/ad9009d7-2d30-47cb-a6d2-61917f244d23
 
 ### <p align="center">Mobile</p>
-<p align="center">
-  <video src="https://github.com/Matheussandi/spacetime/assets/29473781/0b6dacd3-7886-406e-8def-97c058388777"/>
-  <br>
-</p>
+https://github.com/Matheussandi/spacetime/assets/29473781/595e90fa-478c-48cf-8620-eaebec3421e7
 
 # :pushpin: Recursos
 
@@ -40,19 +34,101 @@
 - [Typescript](https://www.typescriptlang.org/)
 - [Zod](https://zod.dev/)
 
+
+# :warning: Requisitos
+- [Git](https://git-scm.com/)
+- [Npm](https://www.npmjs.com/)
+- [Node](https://nodejs.org/)
+- [Expo](https://docs.expo.dev/)
+- [Expo Go](https://expo.dev/client)
+
+# :wrench: Configuração
+- [Github](https://github.com/)
+
 # ▶️ Executando o projeto
-```js
-// Instala as dependências
+
+### Clone o repositório
+```bash
+https://github.com/Matheussandi/spacetime.git
+```
+### Entre na pasta  do projeto
+```bash
+cd spacetime
+```
+## :file_folder: Server
+
+### Entre na pasta server
+```bash
+cd server
+```
+
+### Instale as dependências
+```bash
 npm install
+```
 
-// Na pasta server execute o Prisma para criar as tabelas
+### Informe as variáveis de ambiente
+```bash
+cp .env.example .env
+```
+```bash
+# Github (Web)
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+
+# Github (Mobile)
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+```
+
+### Execute o prisma para criar as tabelas
+```bash
 npx prisma migrate dev
+```
 
-// Excecuta aplicação web e server
+### Inicie a aplicação server
+```bash
 npm run dev
+```
+_______________________________________________________
+## 	:desktop_computer:	Web
 
-// Excecuta aplicação mobile
-expo start
+### Entre na pasta web
+```bash
+cd web
+```
+### Instale a dependências
+```bash
+npm install
+```
+### Informe as variáveis de ambiente
+```bash
+cp .env.example .env
+```
+```bash
+NEXT_PUBLIC_GITHUB_CLIENT_ID=
+```
+### Inicie a aplicação web
+```bash
+npm run dev
+```
+> :warning: Se não abrir automaticamente uma página no navegador, acesse http://localhost:3000 para visualizar a aplicação web.
+
+_______________________________________________________
+
+## 	:iphone: Mobile
+
+### Entre na pasta mobile
+```bash
+cd mobile
+```
+### Instale a dependências
+```bash
+npm install
+```
+### Inicie a aplicação mobile
+```bash
+npx expo start
 ```
 
 # 📄 Licença
