@@ -5,9 +5,9 @@ import * as SecureStore from 'expo-secure-store'
 import Icon from '@expo/vector-icons/Feather'
 import { Link, useRouter } from 'expo-router'
 
-import Logo from '../src/assets/logo.svg'
+import Logo from '../../src/assets/logo.svg'
 import { useEffect, useState } from 'react'
-import { api } from '../src/lib/api'
+import { api } from '../../src/lib/api'
 import dayjs from 'dayjs'
 import ptBr from 'dayjs/locale/pt-br'
 
@@ -27,7 +27,6 @@ export default function NewMemories() {
 
   async function signOut() {
     await SecureStore.deleteItemAsync('token')
-
     router.push('/')
   }
 
@@ -71,7 +70,7 @@ export default function NewMemories() {
         </View>
       </View>
 
-      <View className="mt-6 space-y-10">
+      <View className="my-9 space-y-10">
         {memories.map((memory) => {
           return (
             <View key={memory.id} className="space-y-4">
@@ -92,7 +91,7 @@ export default function NewMemories() {
                 <Text className="text-justify font-body text-base leading-relaxed text-gray-100">
                   {memory.excerpt}
                 </Text>
-                <Link href="/memories/id" asChild>
+                <Link href={`/memories/${memory.id}`} asChild>
                   <TouchableOpacity className="flex-row items-center gap-2">
                     <Text className="font-body text-sm text-gray-200">
                       Ler mais
